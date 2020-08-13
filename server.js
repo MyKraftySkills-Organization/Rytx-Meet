@@ -17,8 +17,13 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.post('/join', (req, res) => {
+    let code = req.query['code'];
+    res.redirect(`/${code}`);
+});
+
 app.get('/create', (req, res) => {
-    res.redirect('/${uuidv4()}');
+    res.redirect(`/${uuidv4()}`);
 });
 
 app.get('/:room', (req, res) => {

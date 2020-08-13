@@ -7,7 +7,7 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
     path:'/peerjs',
     host:'/',
-    port:'443'
+    port:'3030'
 }); 
 
 let myVideoStream;
@@ -130,3 +130,18 @@ const setStopVideo = () => {
     `
     document.querySelector('.main__video_button').innerHTML = html;
   }
+
+  const hideShow = () => {
+     let right = document.getElementById('main_right');
+     let left = document.getElementById('main_left');
+
+    if(right.style.flex == 0.2)
+    {
+        right.style.flex = 0;
+        left.style.flex = 1;
+    }
+    else{
+        right.style.flex = 0.2;
+        left.style.flex = 0.8;
+    }
+  };
