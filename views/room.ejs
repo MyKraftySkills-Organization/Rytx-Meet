@@ -55,6 +55,10 @@
                         <i class="fas fa-comment-alt"></i>
                         <span>Chat</span>
                     </div>
+                    <div onclick="openSideTab(event, 'settings')"  class="main__controls__button">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </div>
                 </div>
                 <div id="myBtn" class="main__controls__block">
                     <div class="main__controls__button">
@@ -64,29 +68,45 @@
 
             </div>
         </div>
-        <!-- <div class="main__right" id="main_right">Tab links -->
-            <!-- Tab content -->
-            <div id="chat" class="main__right tabcontent">
-                <div class="main__header">
-                    <h4>Chat</h4>
-                </div>
-                <div class="main__chat_window">
-                    <ul class="messages" id='messages_id'>
-    
-                    </ul>
-                </div>
-                <div class="main__message_container">
-                    <input type="text" id="chat_message" placeholder="Type Message Here...">
-                </div>
-            </div>
-        <!-- </div> -->
         
+        <!-- Tab content -->
+        <div id="chat" class="main__right tabcontent">
+            <div class="main__header">
+                <h4>Chat</h4>
+            </div>
+            <div class="main__chat_window">
+                <ul class="messages" id='messages_id'>
+
+                </ul>
+            </div>
+            <div class="main__message_container">
+                <input type="text" id="chat_message" placeholder="Type Message Here...">
+            </div>
+        </div>
+    
         <div id="participants" class="main__right tabcontent">
             <div class="main__header">
                 <h4>Participants</h4>
             </div>
         </div>
-    </div>
+
+        <div id="settings" class="main__right tabcontent">
+            <div class="main__header">
+                <h4>Settings</h4>
+                    <div class="select">
+                        <label for="audioSource">Audio input source: </label><select id="audioSource"></select>
+                    </div>
+
+                    <div class="select">
+                        <label for="audioOutput">Audio output destination: </label><select id="audioOutput"></select>
+                    </div>
+
+                    <div class="select">
+                        <label for="videoSource">Video source: </label><select id="videoSource"></select>
+                    </div>
+            </div>
+        </div>
+    </div>  <!-- main ends here -->
 
       <!-- The Modal -->
       <div id="myModal" class="modal">
