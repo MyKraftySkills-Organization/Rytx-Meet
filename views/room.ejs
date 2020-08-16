@@ -46,17 +46,17 @@
                         <span>Security</span>
                     </div>
                             
-                    <div class="main__controls__button">
+                    <div class="main__controls__button" onclick="openSideTab(event, 'participants')">
                         <i class="fas fa-user-friends"></i>
                         <span>Participants</span>
                     </div>
                 
-                    <div onclick="hideShow()" class="main__controls__button">
+                    <div onclick="openSideTab(event, 'chat')"  class="main__controls__button">
                         <i class="fas fa-comment-alt"></i>
                         <span>Chat</span>
                     </div>
                 </div>
-                <div class="main__controls__block">
+                <div id="myBtn" class="main__controls__block">
                     <div class="main__controls__button">
                         <span class="leave_meeting">Leave Meeting</span>
                     </div>
@@ -64,19 +64,68 @@
 
             </div>
         </div>
-        <div class="main__right" id="main_right">
+        <!-- <div class="main__right" id="main_right">Tab links -->
+            <!-- Tab content -->
+            <div id="chat" class="main__right tabcontent">
+                <div class="main__header">
+                    <h4>Chat</h4>
+                </div>
+                <div class="main__chat_window">
+                    <ul class="messages" id='messages_id'>
+    
+                    </ul>
+                </div>
+                <div class="main__message_container">
+                    <input type="text" id="chat_message" placeholder="Type Message Here...">
+                </div>
+            </div>
+        <!-- </div> -->
+        
+        <div id="participants" class="main__right tabcontent">
             <div class="main__header">
-                <h6>chat</h6>
-            </div>
-            <div class="main__chat_window">
-                <ul class="messages" id='messages_id'>
-
-                </ul>
-            </div>
-            <div class="main__message_container">
-                <input type="text" id="chat_message" placeholder="Type Message Here...">
+                <h4>Participants</h4>
             </div>
         </div>
     </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+            <div class="modal-content text-white">
+                <h3>Leave Meeting</h3>
+                <div style="margin-top: 20px; margin:auto;">
+                    <button class="btn btn-danger btn-lg">Leave</button>
+                    &nbsp;
+                    <button id="cancel" class="btn btn-primary btn-lg">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <script defer>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            var cancel = document.getElementById("cancel");
+
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+            cancel.onclick = () => {
+                modal.style.display = "none";
+            }
+        
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+        </script>
 </body>
 </html>
