@@ -17,21 +17,21 @@
                 </div>
 
                 <div class="links">
-                    <span id="myBtn">Join Meeting</span>
-                    <a href="/create">Create Meeting</a>
+                    <span id="JoinBtn">Join Meeting</span>
+                    <a id="CreateBtn" href="/create">Create Meeting</a>
                 </div>
             </div>
         </div>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-        <!-- Modal content -->
+        <!-- Join Modal -->
+        <div id="join" class="modal">
+        <!-- Join Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
             <h3>Join Meeting</h3>
             <div class="input">
-                <form action="/join" method="POST">
+                <form action="/join" method="GET">
+                    <input type="text" class="code-input" name="name" placeholder="Name">
                     <input type="text" class="code-input" name="meeting-code" placeholder="Meeting Code">
                     &nbsp;
                     <input type="submit" value="Join" class="btn btn-primary">
@@ -39,34 +39,49 @@
             </div>
         </div>
 
+
+         <!-- Create Modal -->
+        <div id="create" class="modal">
+            <!-- Create Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Join Meeting</h3>
+                <div class="input">
+                    <form action="/create" method="GET">
+                        <input type="text" class="code-input" name="name" placeholder="Name">
+                        &nbsp;
+                        <input type="submit" value="Join" class="btn btn-primary">
+                    </form>
+                </div>
+            </div>    
         </div>
+
         <script defer>
-            // Get the modal
-            var modal = document.getElementById("myModal");
-
+            // Join modal
+            var joinModal = document.getElementById("join");
             // Get the button that opens the modal
-            var btn = document.getElementById("myBtn");
-
+            var join = document.getElementById("JoinBtn");
             // Get the <span> element that closes the modal
+
             var span = document.getElementsByClassName("close")[0];
-
             // When the user clicks on the button, open the modal
-            btn.onclick = function() {
-            modal.style.display = "block";
-            }
 
+            join.onclick = function() {
+                joinModal.style.display = "block";
+            }
+            create.onclick = function() {
+                joinModal.style.display = "none";
+            }
             // When the user clicks on <span> (x), close the modal
             span.onclick = function() {
-            modal.style.display = "none";
+                joinModal.style.display = "none";
             }
-
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
+                if (event.target == joinModal) {
+                    joinModal.style.display = "none";
                 }
             }
-
         </script>
     </body>
 </html>
