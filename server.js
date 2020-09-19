@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/create', (req, res) => {
-    res.redirect('/${uuidv4()}');
+    res.redirect(`/${uuidv4()}`);
 });
 
 app.get('/:room', (req, res) => {
@@ -32,7 +32,7 @@ io.on('connection', socket => {
         socket.on('message', message => {
             io.to(roomId).emit('createMessage', message); 
         })
-    
+        io.close().to(roomId).broadcast.emit('user-disconnected', userId);
     })
 })
 
