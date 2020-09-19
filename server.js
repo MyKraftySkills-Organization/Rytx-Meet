@@ -1,3 +1,4 @@
+// import files
 const express = require('express');
 const app = express();
 const server = require('http').Server(app);
@@ -8,11 +9,15 @@ const peerServer = ExpressPeerServer(server, {
     debug:true
 });
 
-
+// setup view engine
 app.set('view engine', 'ejs');
+// set static folder
 app.use(express.static('public'));
+// path for peerjs
 app.use('/peerjs', peerServer);
 
+
+// Routing 
 app.get('/', (req, res) => {
     res.render('home');
 });
@@ -30,6 +35,7 @@ app.get('/:room', (req, res) => {
     res.render('room', { roomId: req.params.room })
 });
 
+// Socket Functions
 io.on('connection', socket => {
     socket.on('join-room', (roomId, userId ) => {
         console.log('a user connected');
@@ -45,5 +51,5 @@ io.on('connection', socket => {
 })
 
 
-
+// Server start
 server.listen(process.env.PORT || 3030);
