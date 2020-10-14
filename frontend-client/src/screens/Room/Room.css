@@ -1,0 +1,112 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.middle-section{
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+/* Bottom Navigation Styling */
+.bottom-nav-custom{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex: 0.1;
+    background-color: black;   
+    color: white;
+    font-size: 2rem;
+}
+
+/* Components of middle-section styling */
+.main-window-grid{
+    padding-top: 50px;
+    background-color: rgb(73, 71, 71);
+    flex: 0.9;
+    grid-gap: 10px;
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(3, 300px);
+    align-items: center;
+    justify-content: center;
+    /* align-self: center; */
+}
+
+/* Side Panel and components designing */
+.side-panel{
+    color: white;
+    background-color: rgb(31, 28, 28);
+    display: flex;
+    flex: 0.2;
+    flex-direction: column;
+}
+
+.side-panel .chat-input, .chat-messages, .participants{
+    width: 100%;
+    height: 100%;
+    font-size: 1.3rem;
+}
+/* Chat Component Designing */
+.chat-messages{
+    flex: 0.9;
+}
+
+.chat-input{
+    flex: 0.1;
+}
+
+/* Icons designing */
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: .5em ;
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 1.3rem;
+}
+.icon:hover{
+    opacity: 1;
+}
+
+.participants {
+    display: flex;
+    flex-direction: column;
+    opacity: 0.9;
+}
+
+.participants .share-link {
+    font-size: 1.5rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(72, 165, 228, 0.8);
+}
+.participants .share-link:hover {
+    background-color: rgba(72, 165, 228, 1);
+    color: black;
+    cursor: pointer;
+}
+
+.person{ 
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+}
+
+.participants-list {
+    padding-top: 10px;
+}
+
+.center{
+    text-align: center;
+}
+
+.red { color: red;}
+.green { color:lightgreen;}
+.bold { font-weight: bolder;}
