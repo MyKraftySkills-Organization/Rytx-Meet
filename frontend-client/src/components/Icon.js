@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Icon({style, title, textStyle=''}) {
+function Icon({classes, title, textStyle=''}) {
 
     return (
         <div className="icon">
-            <i className={style}></i>
+            <i className={classes}></i>
             <span className={textStyle}>{title}</span>
         </div>
     )

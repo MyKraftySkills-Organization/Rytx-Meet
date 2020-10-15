@@ -1,6 +1,5 @@
-import React from 'react'
-import Chat from '../components/Chat'
-import Participants from '../components/Participants'
+import React from 'react';
+import Participants from '../components/Participants';
 
 function SideNavigation() {
     return (

@@ -4,16 +4,20 @@ import MainWindow from '../../containers/MainWindow';
 import SideNavigation from '../../containers/SideNavigation';
 import './Room.css';
 
-function Room() {
-    return (
-        <div className="main">
-            <div className="middle-section">
-                <MainWindow/>
-                <BottomNavigation/>
+class Room extends React.Component {
+
+    render(){
+        return (
+            <div className="main" id="capture">
+                <div className="middle-section">
+                    <MainWindow/>
+                    <BottomNavigation />
+                </div>
+                <SideNavigation />
             </div>
-            <SideNavigation/>
-        </div>
-    )
+        );
+    }
+    
 }
 
 export default Room
