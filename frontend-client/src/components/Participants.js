@@ -10,13 +10,41 @@ function Participants() {
                 <i className="fa fa-share-alt"></i>
             </div>
             <div className="participants-list">
-                <Person style="fa fa-user green" name="Akshit Batra"/>
-                <Person style="fa fa-user red" name="Some other guy"/>
-                <Person style="fa fa-user green" name="Some other guy"/>
-                <Person style="fa fa-user green" name="Some guy"/>
-                <Person style="fa fa-user red" name="Random"/>
-                <Person style="fa fa-user green" name="Some other guy"/>
-                <Person style="fa fa-user green" name="Guy"/>
+                <Person classes="fa fa-user green" name="Akshit Batra"/>
+                <Person classes="fa fa-user red" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Some guy"/>
+                <Person classes="fa fa-user red" name="Random"/>
+                <Person classes="fa fa-user green" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Guy"/>
+                <Person classes="fa fa-user green" name="Akshit Batra"/>
+                <Person classes="fa fa-user red" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Some guy"/>
+                <Person classes="fa fa-user red" name="Random"/>
+                <Person classes="fa fa-user green" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Guy"/>
+                <Person classes="fa fa-user green" name="Akshit Batra"/>
+                <Person classes="fa fa-user red" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Some guy"/>
+                <Person classes="fa fa-user red" name="Random"/>
+                <Person classes="fa fa-user green" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Guy"/>
+                <Person classes="fa fa-user green" name="Akshit Batra"/>
+                <Person classes="fa fa-user red" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Some guy"/>
+                <Person classes="fa fa-user red" name="Random"/>
+                <Person classes="fa fa-user green" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Guy"/>
+                <Person classes="fa fa-user green" name="Akshit Batra"/>
+                <Person classes="fa fa-user red" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Some guy"/>
+                <Person classes="fa fa-user red" name="Random"/>
+                <Person classes="fa fa-user green" name="Some other guy"/>
+                <Person classes="fa fa-user green" name="Guy"/>
             </div>
         </div>
     )
